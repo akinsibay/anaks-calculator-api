@@ -2,7 +2,7 @@ const {spawn} = require('child_process')
 
 const sendDataToPython = (latex)=>{
     return new Promise((resolve,reject)=>{
-        const childPython = spawn('python',['./Calculation/calculator.py',latex])
+        const childPython = spawn('python3',['./Calculation/calculator.py',latex])
         childPython.on('close',(code)=>{ //kapanırken
             console.log('child process exited with code '+code)
         })
